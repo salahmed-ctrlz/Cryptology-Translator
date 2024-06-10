@@ -1,0 +1,78 @@
+/* Animated Background */
+body {
+    background: linear-gradient(to right, #00c3ff54, #f100e5af);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Interactive Elements */
+.container {
+    background-color: #ffffff62;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.527);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+textarea, select, input {
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto 10px; /* Center horizontally and add bottom margin */
+    padding: 10px;
+    border: 1px solid #ad00b3ce;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+
+textarea:focus, select:focus, input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    width: 32%;
+    padding: 10px;
+    margin: 5px 1%;
+    border: none;
+    border-radius: 4px;
+    background-color: #004a8f41;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #00ffc893;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Copy Button */
+.output-container {
+    position: relative;
+}
+
+#outputText {
+    width: calc(100% - 120px); /* Adjust width to leave space for the button */
+    margin-right: 10px; /* Add margin to separate the button */
+}
+
+#copyBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

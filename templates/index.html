@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptography Translator</h1>
+        <textarea id="inputText" placeholder="Enter your message here..."></textarea>
+        <select id="cipherSelect">
+            <option value="caesar">Caesar Cipher</option>
+            <option value="morse">Morse Code</option>
+            <option value="vigenere">Vigenère Cipher</option>
+        </select>
+        <input type="text" id="key" placeholder="Enter key (for Vigenère)">
+        <button id="encodeBtn">Encode</button>
+        <button id="decodeBtn">Decode</button>
+        <div class="output-container">
+            <textarea id="outputText" readonly placeholder="Your translated message will appear here..."></textarea><br>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
